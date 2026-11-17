@@ -1,11 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tentang Kami - Sport Center IDN</title>
+    <meta name="description" content="Profil lengkap Sport Center IDN, visi misi, fasilitas unggulan, dan tim pengembang Kelompok 2 Final Project Semester 1.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        sport: {
+                            green: '#10B981',
+                            darkGreen: '#047857',
+                            neon: '#00F0FF',
+                            accent: '#F59E0B',
+                            dark: '#0F172A',
+                            darker: '#020617',
+                            card: '#1E293B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <h1>Ini halaman about us</h1>
+<body class="bg-sport-darker text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-sport-darker/90 backdrop-blur-md border-b border-slate-800" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-300 flex items-center justify-center text-sport-darker shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="zap" class="w-6 h-6 stroke-[2.5]"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block">SPORT CENTER <span class="text-emerald-400">IDN</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Arena Olahraga Modern</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Beranda</a>
+                <a href="index.html#fasilitas" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Fasilitas & Lapangan</a>
+                <a href="index.html#booking-cepat" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Cek Jadwal</a>
+                <a href="index.html#harga" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Paket Member</a>
+                <a href="aboutus.html" class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">Tentang Kami</a>
+                <a href="index.html#kontak" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Kontak</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="index.html#booking-cepat" class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/25 transition-all text-sm flex items-center gap-2">
+                    <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                    <span>Booking Online</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sport-dark border-b border-slate-800 px-6 py-5 space-y-4">
+            <a href="index.html" class="block text-base text-slate-300 hover:text-emerald-400">Beranda</a>
+            <a href="index.html#fasilitas" class="block text-base text-slate-300 hover:text-emerald-400">Fasilitas & Lapangan</a>
+            <a href="index.html#booking-cepat" class="block text-base text-slate-300 hover:text-emerald-400">Cek Jadwal & Booking</a>
+            <a href="index.html#harga" class="block text-base text-slate-300 hover:text-emerald-400">Paket Member</a>
+            <a href="aboutus.html" class="block text-base font-semibold text-emerald-400">Tentang Kami</a>
+            <a href="index.html#kontak" class="block text-base text-slate-300 hover:text-emerald-400">Kontak & Lokasi</a>
+        </div>
+    </header>
+
+    <!-- HEADER BANNER -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-slate-900 to-sport-darker border-b border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/30">Profil & Visi Kami</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-4 tracking-tight">Membangun Ekosistem Olahraga Berkualitas</h1>
+            <p class="text-slate-400 max-w-2xl mx-auto mt-4 text-base sm:text-lg">
+                Sport Center IDN hadir untuk menyediakan gelanggang olahraga berstandar dunia yang ramah untuk semua kalangan, dari atlet amatir hingga profesional.
+            </p>
+        </div>
+    </section>
+
+    <!-- CERITA & LATAR BELAKANG -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Cerita Kami</span>
+                <h2 class="text-3xl font-extrabold text-white">Dari Komunitas, Untuk Komunitas</h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Sport Center IDN didirikan berawal dari keresahan sulitnya menemukan lapangan olahraga yang memenuhi standar keamanan cedera, penerangan memadai, serta kebersihan fasilitas di area perkotaan.
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Sejak tahun 2024, kami telah mengembangkan kompleks gelanggang terpadu dengan integrasi teknologi reservasi digital mandiri, memangkas proses pemesanan manual yang lambat menjadi serba cepat dan transparan.
+                </p>
+
+                <!-- Nilai Utama -->
+                <div class="grid grid-cols-2 gap-4 pt-4">
+                    <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700">
+                        <i data-lucide="shield" class="w-6 h-6 text-emerald-400 mb-2"></i>
+                        <h4 class="font-bold text-white text-sm">Keselamatan Atlet</h4>
+                        <p class="text-xs text-slate-400 mt-1">Material lantai bersertifikasi peredam beban.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-teal-400 mb-2"></i>
+                        <h4 class="font-bold text-white text-sm">Higienitas Terjaga</h4>
+                        <p class="text-xs text-slate-400 mt-1">Sanitasi ruang shower dan loker setiap 2 jam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gambar Suasana -->
+            <div class="relative">
+                <div class="rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=900&auto=format&fit=crop" 
+                         alt="Gedung Sport Center IDN" 
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="absolute -bottom-6 -right-6 hidden sm:block p-5 bg-slate-900 border border-slate-700 rounded-2xl shadow-xl max-w-xs">
+                    <p class="text-xs text-slate-400">Total Pengguna Aktif</p>
+                    <p class="text-2xl font-extrabold text-emerald-400">50.000+ Pemain</p>
+                    <p class="text-[11px] text-slate-400 mt-1">Terdaftar dalam berbagai turnamen resmi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISI & MISI -->
+    <section class="py-16 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Visi -->
+                <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                        <i data-lucide="target" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Visi Kami</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        Menjadi jaringan gelanggang olahraga terpadu nomor satu di Indonesia yang menginspirasi gaya hidup sehat, aktif, dan melahirkan talenta atlet berprestasi di kancah nasional maupun dunia.
+                    </p>
+                </div>
+
+                <!-- Misi -->
+                <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-4">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Misi Kami</h3>
+                    <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <span>Menyediakan sarana lapangan dengan spesifikasi standar federasi internasional.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <span>Menghadirkan platform digital booking yang praktis, cepat, dan transparan.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <span>Mendukung turnamen dan pembinaan bibit muda olahraga di tanah air.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIM PENGEMBANG (FINAL PROJECT KELOMPOK 2) -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Tim Pengembang</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Kelompok 2 - Final Project Semester 1</h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2">Mahasiswa pengembang antarmuka website profil & pemesanan Sport Center IDN.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Member 1 -->
+            <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-emerald-500/50 transition-all">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 text-xl font-black mx-auto flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/20">
+                    A
+                </div>
+                <h4 class="text-lg font-bold text-white">Ammar Ayyasy</h4>
+                <p class="text-xs text-emerald-400 font-semibold mt-0.5">Project Lead & UI Developer</p>
+                <p class="text-xs text-slate-400 mt-2">Bertanggung jawab atas arsitektur halaman, integrasi layout, dan sistem navigasi.</p>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-emerald-500/50 transition-all">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-teal-500 to-cyan-400 text-slate-950 text-xl font-black mx-auto flex items-center justify-center mb-4 shadow-lg shadow-teal-500/20">
+                    K2
+                </div>
+                <h4 class="text-lg font-bold text-white">Anggota 2</h4>
+                <p class="text-xs text-teal-400 font-semibold mt-0.5">UI/UX Designer & Content</p>
+                <p class="text-xs text-slate-400 mt-2">Menyusun konsep antarmuka, pemilihan warna, dan data dummy fasilitas olahraga.</p>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-emerald-500/50 transition-all">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 text-slate-950 text-xl font-black mx-auto flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/20">
+                    K3
+                </div>
+                <h4 class="text-lg font-bold text-white">Anggota 3</h4>
+                <p class="text-xs text-cyan-400 font-semibold mt-0.5">Frontend & Logic Script</p>
+                <p class="text-xs text-slate-400 mt-2">Mengembangkan fitur kalkulator biaya booking interaktif dan filter kategori.</p>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700 text-center hover:border-emerald-500/50 transition-all">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-500 to-orange-400 text-slate-950 text-xl font-black mx-auto flex items-center justify-center mb-4 shadow-lg shadow-amber-500/20">
+                    K4
+                </div>
+                <h4 class="text-lg font-bold text-white">Anggota 4</h4>
+                <p class="text-xs text-amber-400 font-semibold mt-0.5">QA & Dokumentasi</p>
+                <p class="text-xs text-slate-400 mt-2">Menguji responsivitas di layar mobile, memeriksa validitas form dan file panduan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BALIK KE BERANDA -->
+    <section class="py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-black text-white">Siap Mulai Berolahraga Hari Ini?</h2>
+            <p class="text-emerald-100 max-w-xl mx-auto text-sm sm:text-base">
+                Dapatkan slot lapangan terbaikmu sekarang sebelum keduluan tim lain!
+            </p>
+            <div class="pt-2">
+                <a href="index.html#booking-cepat" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-950 hover:bg-slate-900 text-emerald-400 font-bold text-base shadow-xl transition-all">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    <span>Booking Lapangan Sekarang</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-sport-darker border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+            <p>© 2026 Sport Center IDN. Semua hak cipta dilindungi.</p>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-emerald-400 hover:underline">Halaman Beranda</a>
+                <span>•</span>
+                <span>Final Project Semester 1 Kelompok 2</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
