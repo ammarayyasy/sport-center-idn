@@ -22,6 +22,7 @@ Posisi saat ini: **Step 1 - Landing Page & Company Profile**
   - [x] **Testimoni Komunitas**: Ulasan komunitas basket, badminton, futsal
   - [x] **Kontak & Google Maps**: Alamat, WhatsApp direct chat, jam operasional, dan embed Google Maps
   - [x] **Halaman Tentang Kami (`aboutus.html`)**: Visi & Misi, latar belakang, profil tim pengembang Kelompok 2
+  - [x] **Halaman Masuk / Login (`login.html`)**: Desain split-card responsif, tab role Member/Admin, show/hide password, simulasi notifikasi toast, dan social login dummy
   - [x] **Responsif & Aksesibilitas**: Mobile drawer menu, ukuran tombol ramah sentuhan, rasio kontras tinggi, alt tags
 
 - [ ] **STEP 2 - User Management & Dashboard Admin (Opsional / Tahap Selanjutnya)**
